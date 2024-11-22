@@ -40,3 +40,30 @@ bodyTag.style = "background-color: skyblue";
 // seleccionar el 1er elemento de la colección de elementos h3
 let primerH3 = document.getElementsByTagName("h3")[0];
 primerH3.style = "color: yellow";
+
+
+// Crear un nuevo elemento "<li></li>"
+let nuevoElemento = document.createElement("li");
+
+// Asignar valor al HTML interno del elemento creado
+// windows + . -> ventana de emoticonos
+nuevoElemento.innerHTML = "🐭";
+
+console.log("nuevo elemento creado: ", nuevoElemento);
+
+// Seleccionar etiquetas OL dentro de mi estructura HTML
+let etiquetaOL = document.getElementsByTagName("OL");
+console.log("etiqueta <ol>: ", etiquetaOL);
+
+// Añadir un nuevo elemento hijo dentro de la 1era etiqueta ol
+etiquetaOL[0].appendChild(nuevoElemento);
+
+// Añadir un elemento en la posición que le indiquemos
+etiquetaOL[0].insertBefore(nuevoElemento, etiquetaOL[0].children[0]);
+
+let nuevaEtiqueta = "<h1>Cabeceraa!</h1>";
+
+cabeceraPrincipal.insertAdjacentHTML("beforebegin","<h1>Cabecera antes de la etiqueta</h1>");
+cabeceraPrincipal.insertAdjacentHTML("afterbegin", "<h1>Cabecera al principio del contenido</h1>");
+cabeceraPrincipal.insertAdjacentHTML("beforeend", "<h1>Cabecera al final del contenido</h1>");
+cabeceraPrincipal.insertAdjacentHTML("afterend", "<h1>Cabecera despues de la etiqueta</h1>");
