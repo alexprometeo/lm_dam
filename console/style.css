@@ -1,0 +1,98 @@
+/* 
+Body:
+ - Cambia la fuente de la página a Arial o cualquier otra fuente sans-serif
+ - Elimina el margen predeterminado del navegador
+ - Elimina el padding (espaciado interior) predeterminado del navegador
+ - Asignar un color de fondo claro para toda la página. Elige el que mas te guste. 
+*/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: burlywood;
+}
+
+/*
+Header:
+ - Un color de fondo oscuro
+ - El color de texto debe ser blanco
+ - Añadimos padding de 20px
+ - Centra el texto dentro del header con text-align
+*/
+
+header {
+    background-color: cadetblue;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/*
+Elemento con el identificador peliculas-lista:
+ - Elimina los puntos de las listas
+ - Elimina el padding (espacio interior) 
+ - Añade un margen por encima de la lista de 20px
+ - Centra la lista en la página con text-align
+*/
+
+#peliculasLista {
+    /* list-style: none; */
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/*
+Elementos con la clase pelicula-item:
+ - Fondo blanco
+ - Margen de 10px
+
+ */
+
+.peliculaItem {
+    background-color: antiquewhite;
+    margin: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+
+/*
+Etiqueta button que está dentro del elemento con la clase pelicula-item:
+ - Un color de fondo rojo para llamar la atención
+ - El color de texto debe ser blanco
+ - Quitar el borde
+
+ */
+
+ .peliculaItem > button, button{
+    background-color: crimson;
+    color: whitesmoke;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    border: 0;
+}
+
+ /*
+Etiqueta button que está dentro del elemento con la clase pelicula-item al pasar ratón por encima:
+    - Cambiar el color de fondo a un rojo mas oscuro 
+
+*/
+
+.peliculaItem > button:hover, button:hover {
+    background-color: darkred;
+}
+
+/*Estilo para el boton que modifica el fondo*/
+button#cambiarFondo {
+    width: 98%;
+    margin-left: 10px;
+    border-radius: 25px;
+}
