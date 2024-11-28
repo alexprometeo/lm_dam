@@ -30,7 +30,11 @@
     <script>
         // Función para eliminar una película
         function eliminarPelicula(boton) {
+            console.log("elemento que se pasó por parametro: ", boton);
+
             const elementoPadre = boton.parentElement;
+            console.log("Elemento padre: ", elementoPadre);
+
             elementoPadre.remove();
         }
 
@@ -40,6 +44,7 @@
             let color = "#";
             for (let i = 0; i < 6; i++) {
                 color += letras[Math.floor(Math.random() * 16)];
+                console.log("valor de la variable color: ", color);
             }
             document.body.style.backgroundColor = color;
         }
