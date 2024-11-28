@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Las Mejores Películas de 2024</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Las mejores películas de 2024</h1>
+    </header>
+    <main>
+        <ul id="peliculasLista">
+            <li class="peliculaItem">
+                <span>La sustancia</span>
+                <button onclick="eliminarPelicula(this)">Eliminar</button>
+            </li>
+            <li class="peliculaItem">
+                <span>Dune: Parte II</span>
+                <button onclick="eliminarPelicula(this)">Eliminar</button>
+            </li>
+            <li class="peliculaItem">
+                <span>Spider-Man: Across the Spider-Verse</span>
+                <button onclick="eliminarPelicula(this)">Eliminar</button>
+            </li>
+        </ul>
+        <button id="cambiarFondo" onclick="cambiarColorFondo()">Cambiar Color de Fondo</button>
+    </main>
+    <script>
+        // Función para eliminar una película
+        function eliminarPelicula(boton) {
+            const elementoPadre = boton.parentElement;
+            elementoPadre.remove();
+        }
+
+        // Función para cambiar el color de fondo a un color aleatorio
+        function cambiarColorFondo() {
+            const letras = "0123456789ABCDEF";
+            let color = "#";
+            for (let i = 0; i < 6; i++) {
+                color += letras[Math.floor(Math.random() * 16)];
+            }
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+</body>
+</html>
