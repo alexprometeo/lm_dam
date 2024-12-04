@@ -1,0 +1,102 @@
+/* 
+    Los selectores están en lenguaje natural, pasalo a nomenclatura CSS y añade las reglas de estilos faltantes en base a los comentarios incluídos en cada declaración.
+	**Puedes añadir más estilos además de los que piden los enunciados
+*/
+
+
+
+body {
+    /*
+    - Cambia la fuente de la página a Arial o cualquier otra fuente sans-serif
+    - Elimina el margen predeterminado del navegador
+    - Elimina el padding (espaciado interior) predeterminado del navegador
+    - Asignar un color de fondo mas claro para toda la página. Elige el que quieras.  
+    */
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: blanchedalmond;
+ }
+ 
+
+
+header {
+    /*
+        - Un color de fondo oscuro
+        - El color de texto debe ser blanco
+    */        
+    padding: 20px;    
+    text-align: center;
+    background-color: cadetblue;
+    color: antiquewhite;
+}
+
+
+#lista {
+    text-align: center;
+    /*
+        - Elimina los puntos de la lista
+        - Añade 1rem de padding izquierdo y 1 rem de padding derecho
+        - Añade un margen por encima de la lista de 20 pixeles
+    */
+    list-style: none;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: 20px;
+}
+ 
+
+
+.item {
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    /* 
+        - Fondo blanco
+        - Margen de 10 pixeles
+    */
+    background-color: wheat;
+    margin: 10px;
+}
+
+span {
+    font-weight: bold;
+    /*
+        - tamaño de texto de 40 pixeles
+        - color de texto 
+    */
+    font-size: 40px;
+    color:brown;
+}
+
+img {
+    width: 100px;
+    height: auto;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+main button, main > button {
+    font-size: 24px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 70%;
+    margin: auto 15%;
+    /* 
+        - Un color de fondo para llamar la atención
+        - El color de texto debe ser blanco
+        - Añadir un borde de 2 pixeles, estilo sólido y color oscuro
+    */
+    background-color: crimson;
+    border: 2px solid darkred;
+    color: antiquewhite;
+}
+
+main button:hover, main > button:hover {
+    /* - Cambiar el color de fondo que destaque aún más  */
+    background-color: brown;
+}
+    

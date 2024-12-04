@@ -1,0 +1,1 @@
+¿Cuál es la diferencia entre un lenguaje cliente y un lenguaje servidor? Da un ejemplo de cada uno y explica cómo se ejecutan.

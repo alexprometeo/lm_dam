@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tu nombre - Mejores dispositivos--</title>
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Los mejores dispositivos móviles de 2024</h1>
+    </header>
+    <main>
+        <!-- Crear la lista de dispositivos móviles:
+            Finalmente:
+                - Valida el documento html y corrígelo.
+        -->
+        <ol id="lista">
+            <li class="item">
+                <span>Dispositivo 1</span>
+                <img src="null" alt="Dispositivo 1">
+            </li>
+            <li class="item">
+                <span>Dispositivo 2</span>
+                <img src="null" alt="Dispositivo 2">
+            </li>
+            <li class="item">
+                <span>Dispositivo 3</span>
+                <img src="null" alt="Dispositivo 3">
+            </li>
+            <li class="item">
+                <span>Dispositivo 4</span>
+                <img src="null" alt="Dispositivo 4">
+            </li>
+            <li class="item">
+                <span>Dispositivo 5</span>
+                <img src="null" alt="Dispositivo 5">
+            </li>            
+        </ol>
+        <button onclick="modificarDOM()">Ejecutar</button>
+    </main>
+    <!-- 
+        Puedes dejar aquí toda la lógica de javascript o llevarlo a un fichero .js externo;  
+        **recordad que si lo hacéis en la etiqueta head debéis utilizar defer
+    -->
+    <script>
+		
+        // Además de modificar estilos, debe realizar las siguientes instrucciones:
+        //  - eliminar el último elemento de la lista haciendo referencia a la colección de elemento y al índice que se corresponda al último elemento 
+		// **(recuerda utilizar console.log para ayudarte a ver los valores que va tomando las variables)	
+		
+		
+		// Cuando tengas todo listo y funcionando, comprímelo y súbelo a Alexia. 
+		
+		// Opcional: dividir la ejecución con los cambios de estilos y la ejecución con las modificaciones en dos botones diferentes. 
+		// Es decir, en lugar de 1 botón que haga todo, utiliza 2 botones, uno para cambiar estilos y otro para modificar y eliminar.
+		// Opcionalmente también sube el proyecto a un nuevo repositorio privado a github e invítame como colaborador del repositorio; mi nombre de usuario: alexprometeo
+        
+        function modificarDOM() {
+            // Modificar estilos
+            let header = document.getElementsByTagName("header")[0];
+            console.log("elemento header: ", header);
+            header.style = "font-style: italic;";
+
+            let item = document.getElementsByClassName("item");
+            console.log("elemento item: ", item);
+            item[0].style = "background-color: skyblue;";
+
+            let lista = document.getElementById("lista");
+            console.log("elemento lista: ", lista);
+            lista.style = "margin-bottom: 10px;";
+
+            //lista = document.lista;
+
+            let span = document.getElementsByTagName("span");
+            console.log("1er elemento span", span);
+            span[0].innerText = "Cambiado!!";
+
+            let lastIndex = item.length-1;            
+            let lastElement = item[lastIndex];
+            console.log("ultimo elemento: ", lastElement);
+
+            lastElement.remove();
+
+        }
+    </script>
+
+</body>
+</html>
