@@ -1,0 +1,26 @@
+body {
+    /* color de fondo agradable */
+    /* fuente agradable */    
+}
+
+elemento con el identificador "tituloPrincipal" {
+    /* margen superior de 20 píxeles */
+    /* poner el texto en negrita */
+    font-size: 2em;
+    /* centrar el texto */    
+}
+
+elemenento con el identificador "agregarTarea" {
+    display: block;
+    padding: 10px 20px;
+    margin: 10px 20px;
+    /* cambiar el cursor del raton a la mano */
+    /* sin bordes visuales */
+    /* bordes del elemento redondeados */
+    /* color de fondo que pegue con el elegido del body */
+    /* color de texto blanco */
+}
+
+elemenento con el identificador "agregarTarea":al pasar el raton por encima {
+    /*color de fondo algo difetente del elegido arriba*/
+}
