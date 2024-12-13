@@ -1,26 +1,64 @@
 body {
     /* color de fondo agradable */
+    background-color: burlywood;
     /* fuente agradable */    
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-elemento con el identificador "tituloPrincipal" {
+#tituloPrincipal {
     /* margen superior de 20 píxeles */
+    margin-top: 20px;
     /* poner el texto en negrita */
+    font-weight: lighter;
     font-size: 2em;
     /* centrar el texto */    
+    text-align: center;
 }
 
-elemenento con el identificador "agregarTarea" {
-    display: block;
-    padding: 10px 20px;
-    margin: 10px 20px;
+main button {    
+    padding: 10px 20px;    
     /* cambiar el cursor del raton a la mano */
+    cursor: pointer;    
     /* sin bordes visuales */
+    border: none;
     /* bordes del elemento redondeados */
-    /* color de fondo que pegue con el elegido del body */
+    border-radius: 15px;
     /* color de texto blanco */
+    color: antiquewhite;
 }
 
-elemenento con el identificador "agregarTarea":al pasar el raton por encima {
+main > #listaTareas button.eliminar {
+    /* color de fondo que pegue con el elegido del body */
+    background-color: rgb(236, 79, 79);
+}
+
+ main > button#agregarTarea {
+    display: block;
+    margin: 20px auto;  
+    background-color: cadetblue;
+}
+
+#agregarTarea:hover {
     /*color de fondo algo difetente del elegido arriba*/
+    background-color: rgb(39, 158, 162);
+}
+
+footer {
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.tarea {
+    background-color: thistle;
+    margin: 5px;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    font-family: monospace;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
 }
