@@ -1,12 +1,12 @@
-//let nombre = prompt("Bienvenido al asistente de DAM, ¿cuál es tu nombre?");
+let nombre = prompt("Bienvenido al asistente de DAM, ¿cuál es tu nombre?");
 
-//console.log("Encantado", nombre);
+console.log("Encantado", nombre);
 
-//let anioNacimiento = prompt("¿En qué año has nacido?");
+let anioNacimiento = prompt("¿En qué año has nacido?");
 let anioActual = new Date().getFullYear();
-//let edad = anioActual - anioNacimiento;
+let edad = anioActual - anioNacimiento;
 
-//console.log("Tu edad es", edad);
+console.log("Tu edad es", edad);
 
 let opcion = prompt("¿Qué opción quieres elegir? 1 (número random ) o 2 (operaciones)");
 console.log("Opción elegida", opcion);
