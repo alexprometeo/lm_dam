@@ -1,0 +1,49 @@
+body {
+    background-color: cadetblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header, footer {
+    text-align: center;
+}
+
+form {
+    max-width: 30%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+}
+
+input, textarea, select {
+    padding: 5px;
+    margin: 5px 0;
+    background-color: #607D8B;
+    color: whitesmoke;
+    border: none;
+    border-radius: 5px;
+}
+
+/*Cambiar el color del texto del atributo placeholder*/
+::placeholder{
+    color: rgb(54, 82, 182);
+    opacity: 1; /* Firefox */
+}
+
+input[type="submit"] {
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #57859b;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #65a6c4;
+}
+
+fieldset {
+    margin: 10px 0;
+    padding: 10px;
+}
