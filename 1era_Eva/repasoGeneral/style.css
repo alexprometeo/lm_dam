@@ -62,3 +62,20 @@ footer {
     align-items: center;
     font-size: 18px;
 }
+
+
+#mensajes {
+    display: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-width: 450px;
+    margin: auto;
+    font-family: monospace;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
