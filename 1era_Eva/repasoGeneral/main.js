@@ -25,7 +25,18 @@ function agregarTarea() {
 
         textoMensaje.textContent = "¡El nombre de la tarea no puede estar vacía!";
 
-        elementoMensajes.appendChild(textoMensaje);
+        let elementosHijosMensaje = elementoMensajes.children;
+
+        // Comprobar los elementos hijos del elemento mensajes para no añadir mas de un mensaje igual
+        if (elementosHijosMensaje.length !== 0) {
+            for (let index = 0; index < elementosHijosMensaje.length; index++) {
+                if (elementosHijosMensaje[index].textContent !== textoMensaje.textContent) {
+                    elementoMensajes.appendChild(textoMensaje);
+                }
+            } 
+        } else {
+            elementoMensajes.appendChild(textoMensaje);
+        }
     } else {
         textoMensaje.textContent = "";
         elementoMensajes.style = "display: none";
@@ -53,8 +64,28 @@ function agregarTarea() {
             eliminarTarea(this);
         }
 
-        //Añadimos como elemento hijo la variable tarea al elemento con el identificador "listaTareas" 
-        listaTareas.appendChild(tarea);
+        let hijosListadoTareas = listaTareas.children;
+        //console.log("hijosListadoTareas: ", hijosListadoTareas);
+
+        // Comprobación de los elementos hijos del listado de tareas para no añadir tareas duplicadas
+        if (hijosListadoTareas.length !== 0) {
+            let repetido = false;
+            for (let index = 0; index < hijosListadoTareas.length; index++) {
+                if (hijosListadoTareas[index].innerHTML == tarea.innerHTML) {
+                    repetido = true;
+                }
+            }
+
+            if (repetido === false || !repetido) {
+                listaTareas.appendChild(tarea);
+            }
+        } 
+        else {
+            //Añadimos como elemento hijo la variable tarea al elemento con el identificador "listaTareas" 
+            listaTareas.appendChild(tarea);
+        }
+
+
     }
 
 }
@@ -69,5 +100,15 @@ botonAgregar.onclick = function () {
 // recuperar el elemento padre de la variable boton y eliminarlo
 function eliminarTarea (boton) {
     let elementoPadre = boton.parentElement;
-    elementoPadre.remove();
+    let cuidado = prompt("¿Estás seguro que quieres eliminar la tarea? (S/N)");
+    if (cuidado === "S") {
+        elementoPadre.remove();
+    }
+    
 }
+ /*
+Mejoras a implementar:
+- Añadir boton que elimine todas las tareas;
+- Añadir check para completar la tarea y eliminarla;
+- Si el usuario hace click en DAM Prometeo, ir a la web de Prometeo;
+*/
