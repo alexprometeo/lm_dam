@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciber</title>
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <!-- Formulario para registrar una revisión de ciber seguridad:
+         - Nombre del responsable
+         - Departamento (selector)
+         - Nivel de seguridad (radio)
+         - Fecha revisión         
+         - Boton enviar
+    -->
+    <form id="formCiber">
+        <label for="responsable">Nombre del responsable: </label>
+        <input id="responsable" type="text">
+
+        <label for="departamento">Departamento: </label>
+        <select id="departamento">
+            <option value="">Selecciona un departamento</option>
+            <option value="rrhh">Recursos humanos</option>
+            <option value="dev">Desarrollo</option>
+            <option value="IT">Sistemas</option>
+        </select>
+
+        <fieldset>
+            <legend>Nivel de seguridad</legend>
+
+            <label for="high"><input id="high" type="radio" name="security" value="high"> Alto</label>
+            <label for="medium"><input id="medium" type="radio" name="security" value="medium"> Medio</label>
+            <label for="low"><input id="low" type="radio" name="security" value="low"> Bajo</label>
+
+        </fieldset>
+
+        <label for="date">Fecha revisión: </label>
+        <input id="date" type="date" min="2020-01-01" max="2025-01-20">
+
+        <input id="botonEnviar" type="submit" value="Enviar">
+    </form>
+    
+</body>
+</html>
