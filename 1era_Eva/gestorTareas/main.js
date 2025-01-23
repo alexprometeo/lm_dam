@@ -141,3 +141,15 @@ function eliminarTareas () {
         listaTareas.removeChild(listaTareas.firstChild);
     }
 }
+
+const textoFooter = document.getElementById("textoFooter");
+
+textoFooter.onclick = function () {
+    console.log("Entro");
+
+    //Abrir en una nueva ventana la URL indicada
+    window.open("https://www.prometeo-fp.com/");
+
+    //Abrir en la misma ventana la URL indicada
+    //document.location.href = "https://www.prometeo-fp.com/";
+}

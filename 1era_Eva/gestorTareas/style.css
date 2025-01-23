@@ -90,3 +90,13 @@ footer {
     padding: 20px;
     border-radius: 10px;
 }
+
+/*Cambiar el cursor y subrayar el elemento #textoFooter*/
+#textoFooter {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#textoFooter:hover {
+    color: cornflowerblue;
+}
