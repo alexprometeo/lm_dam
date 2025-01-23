@@ -1,14 +1,17 @@
 const botonAgregar = document.getElementById("agregarTarea");
 console.log("botonAgregar:", botonAgregar);
 
+const botonEliminar = document.getElementById("eliminarTareas");
+console.log("eliminarTareas:", botonEliminar);
+
+//seleccionar el elemento con el identificador "listaTareas"
+let listaTareas = document.getElementById("listaTareas");
+
 
 function agregarTarea() {
-    //seleccionar el elemento con el identificador "listaTareas"
-    let listaTareas = document.getElementById("listaTareas");
-    //declarar una variable que tenga como valor la creación de un
-
     let elementoMensajes = document.getElementById("mensajes");
 
+    //declarar una variable que tenga como valor la creación de un nuevo elemento "p"
     let textoMensaje = document.createElement("p");
 
     //elemento div
@@ -95,6 +98,10 @@ botonAgregar.onclick = function () {
     agregarTarea();
 }
 
+botonEliminar.onclick = function () {
+    eliminarTareas();
+}
+
 //Declarar una nueva función llamada eliminarTarea
 // boton por parámetro
 // recuperar el elemento padre de la variable boton y eliminarlo
@@ -108,7 +115,29 @@ function eliminarTarea (boton) {
 }
  /*
 Mejoras a implementar:
-- Añadir boton que elimine todas las tareas;
-- Añadir check para completar la tarea y eliminarla;
 - Si el usuario hace click en DAM Prometeo, ir a la web de Prometeo;
 */
+
+
+// Añadir boton que elimine todas las tareas
+function eliminarTareas () {
+    console.log("listaTareas elementos hijos: ", listaTareas.children);
+    // let elementosHijos = listaTareas.children;
+
+    //Al ser una colección HTML no funciona correctamente el forEach
+    // elementosHijos.forEach(tarea => {
+    //     tarea.remove();
+    // });
+
+    // Con un bucle for normal perdemos la referencia al estar cambiando el length de la lista de tareas y no podemos eliminar debidamente todas las tareas
+    // for (let indice = 0; indice < elementosHijos.length; indice++) {
+        // let tarea = elementosHijos[indice];
+
+        //elementosHijos[indice].remove();
+    // }    
+
+    // Preguntamos si la lista de tareas tiene elementos hijos y, mientras tenga, va eleminando el primer elemento hijo de la lista
+    while (listaTareas.hasChildNodes()) {
+        listaTareas.removeChild(listaTareas.firstChild);
+    }
+}
