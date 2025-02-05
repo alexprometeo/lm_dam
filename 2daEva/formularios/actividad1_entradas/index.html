@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="test.js" defer></script>
+    <script src="pruebas.js" defer></script>
     <title>Estopa</title>
 </head>
 
@@ -14,7 +14,7 @@
         <h2>Compra entradas</h2>
     </header>
     <main>
-        <form method="get" action="..\introducción\test.html">
+        <form method="get" id="formEntradas">
             <label for="name">Nombre:</label>
             <input id="name" name="name" type="text"  placeholder="Escribe tu nombre" required>
 
@@ -22,7 +22,7 @@
             <input id="email" name="email"  type="email" placeholder="usuario@contoso.com">
 
             <label for="tickets">Número de entradas:</label>
-            <input id="tickets" name="tickets" type="number"  min="1" max="8" step="2">
+            <input id="tickets" name="tickets" type="number" step="2">
 
             <label for="date">Fecha del evento:</label>
             <input type="date" id="date" min="2025-01-10" max="2025-06-30">
