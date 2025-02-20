@@ -1,9 +1,22 @@
 let nombre = prompt("Bienvenido al asistente de DAM, ¿cuál es tu nombre?");
 
+//Condición donde si el valor introducido para el nombre está vació mostrar un
+// alert indicando que es erróneo
+
+if (String(nombre).trim() === "") {
+    alert("¡No puede estar vacío el nombre!");
+}
+
 console.log("Encantado", nombre);
 
+//Añadir condición donde mostramos un alert si el año es mayor que el año actual
 let anioNacimiento = prompt("¿En qué año has nacido?");
 let anioActual = new Date().getFullYear();
+
+
+
+
+
 let edad = anioActual - anioNacimiento;
 
 console.log("Tu edad es", edad);
