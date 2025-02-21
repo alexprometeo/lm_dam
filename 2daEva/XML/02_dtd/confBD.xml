@@ -1,0 +1,11 @@
+<!-- 
+    XML con su DOCTYPE que tenga lo siguiente:
+    elemento padre conf
+    dentro de conf, base_datos
+    y dentro de base_datos (un atributo con el host):
+        - user
+        - password (el valor debe estar escapado)
+        - port
+        - max_connections
+        - access_mode (solo puede contener local o remoto)
+-->
