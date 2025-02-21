@@ -1,0 +1,8 @@
+<!-- 
+    Elemento padre catalogo que contenga a su vez el elemento libro
+    ese elemento debe tener el atributo id y los siguientes elementos:
+        - titulo
+        - autor
+        - precio
+        - distribuidora       
+ -->
