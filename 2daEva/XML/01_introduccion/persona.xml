@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- La etiqueta prolog debe llevar la version y la codificación -->
+
+
+<!-- 
+    Elemento padre contactos, dentro varias personas
+    cada persona debe tener: nombre, apellidos, edad, tlf, mail 
+-->
+<persona genero="O">
+    <nombre></nombre>
+    <![CDATA[<apellidos></apellidos>]]>
+    <edad></edad>
+</persona>
+
+<!-- En XML distingue entre mayúsuculas y minúsculas -->
+<!-- <Persona></Persona> -->
