@@ -10,10 +10,10 @@
     </base_datos>
 
     <base_datos host="google.com">
-        <user>pepe</user>
-        <password>passs_1234</password>
-        <port>3000</port>
+        <user>admin</user>
+        <password>admin_1234</password>
+        <port>3001</port>
         <max_connections>1000</max_connections>
-        <access_mode>local</access_mode>
+        <access_mode>remoto</access_mode>
     </base_datos>    
 </conf>
