@@ -6,11 +6,24 @@
     Elemento padre contactos, dentro varias personas
     cada persona debe tener: nombre, apellidos, edad, tlf, mail 
 -->
-<persona genero="O">
-    <nombre></nombre>
-    <![CDATA[<apellidos></apellidos>]]>
-    <edad></edad>
-</persona>
+<contactos>
+    <persona genero="O">
+        <nombre></nombre>
+        <![CDATA[<apellidos></apellidos>]]>
+        <edad></edad>
+        <tlf></tlf>
+        <mail></mail>
+    </persona>
+
+    <persona genero="F">
+        <nombre></nombre>
+        <apellidos></apellidos>
+        <edad></edad>
+        <tlf></tlf>
+        <mail></mail>
+    </persona>
+</contactos>
+
 
 <!-- En XML distingue entre mayúsuculas y minúsculas -->
 <!-- <Persona></Persona> -->
