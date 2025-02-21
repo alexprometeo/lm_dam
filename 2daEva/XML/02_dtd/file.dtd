@@ -1,0 +1,8 @@
+<!ELEMENT conf (base_datos)>
+<!ELEMENT base_datos (user, password, port, max_connections, access_mode)>
+<!ELEMENT user (#PCDATA)>
+<!ELEMENT password (#PCDATA)>
+<!ELEMENT port (#PCDATA)>
+<!ELEMENT max_connections (#PCDATA)>
+<!ELEMENT access_mode (#PCDATA)>
+<!ATTLIST base_datos host CDATA #REQUIRED>

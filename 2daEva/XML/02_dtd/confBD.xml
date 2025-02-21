@@ -7,5 +7,30 @@
         - password (el valor debe estar escapado)
         - port
         - max_connections
-        - access_mode (solo puede contener local o remoto)
+        (solo puede contener local o remoto) -> con el DTD no podemos limitar los valores de las etiquetas, solo atributos
+        - access_mode 
 -->
+
+<!-- DOCTYPE interno: -->
+<!-- <!DOCTYPE conf [
+    <!ELEMENT conf (base_datos)>
+    <!ELEMENT base_datos (user, password, port, max_connections, access_mode)>
+    <!ELEMENT user (#PCDATA)>
+    <!ELEMENT password (#PCDATA)>
+    <!ELEMENT port (#PCDATA)>
+    <!ELEMENT max_connections (#PCDATA)>
+    <!ELEMENT access_mode (#PCDATA)>
+    <!ATTLIST base_datos host CDATA #REQUIRED>
+]> -->
+
+<!-- DOCTYPE externo -->
+<?xml-model href="file.dtd" type="application/xml-dtd"?>
+<conf>
+    <base_datos host="127.0.0.1">
+        <user>pepe</user>
+        <password>passs_1234</password>
+        <port>3000</port>
+        <max_connections>1000</max_connections>
+        <access_mode>local</access_mode>
+    </base_datos>
+</conf>
