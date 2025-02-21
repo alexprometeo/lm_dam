@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="conf">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="base_datos" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="user" type="xs:string"/>
+                            <xs:element name="password" type="xs:string"></xs:element>
+                            <xs:element name="port" type="xs:integer"></xs:element>
+                            <xs:element name="max_connections" type="xs:integer"></xs:element>
+                            <!-- <xs:element name="access_mode" type="xs:string"> -->
+                            <xs:element name="access_mode">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="local"></xs:enumeration>
+                                        <xs:enumeration value="remoto"></xs:enumeration>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="host" type="xs:string" use="required"></xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

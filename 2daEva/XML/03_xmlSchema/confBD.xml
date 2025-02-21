@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conf xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="confBD.xsd">
+    <base_datos host="127.0.0.1">
+        <user>pepe</user>
+        <password>passs_1234</password>
+        <port>3000</port>
+        <max_connections>1000</max_connections>
+        <access_mode>local</access_mode>
+    </base_datos>
+
+    <base_datos host="google.com">
+        <user>pepe</user>
+        <password>passs_1234</password>
+        <port>3000</port>
+        <max_connections>1000</max_connections>
+        <access_mode>local</access_mode>
+    </base_datos>    
+</conf>
