@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://framerusercontent.com/images/ywSqKhJlBxDEBikU41Tb4rlF50.png" rel="icon">
+    <title>Registro de Usuario</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Registro de Usuario</h1>
+    </header>
+
+    <main>
+        <form id="registro">
+            <input type="text" id="username" placeholder="Nombre de Usuario" required minlength="5">
+            <input type="email" id="email" placeholder="Correo Electrónico" required>
+            <input type="number" id="age" placeholder="Edad" required min="18" max="100">
+            <input type="password" id="password" placeholder="Contraseña" required minlength="8">
+            <input type="password" id="confirm_password" placeholder="Confirmar Contraseña" required>
+            <label>
+                <input type="checkbox" id="mostrarContrasenas">
+                Mostrar Contraseñas
+            </label>
+            
+            <button type="submit">Registrarse</button>
+            <button type="button" id="validarCampos">Validar Campos</button>
+        </form>
+    </main>
+    
+    <footer>
+        &copy; 2025 Prometeo
+    </footer>
+</body>
+</html>

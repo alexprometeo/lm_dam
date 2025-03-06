@@ -1,0 +1,115 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #89CFF0, #FFD700);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    height: 98vh;
+    flex-wrap: wrap;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+header {
+    background-color: #1e3740;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #1e3740;
+    color: #F5F5F5;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+main {
+    margin: auto;
+    max-width: 450px;
+    width: 100%;
+}
+
+#registro {
+    background: #fff;
+    padding: 25px;
+    max-width: 450px;
+    width: 100%;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#registro input {
+    width: 99%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border 0.3s;
+}
+
+#registro input:focus {
+    border: 2px solid dodgerblue;
+    outline: none;
+}
+
+#registro button {
+    color: #1e3740;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#registro button[type="submit"] {
+    background-color: #bff75e;
+    
+}
+
+#registro button[type="button"] {
+    background-color: #FFD700;
+}
+
+#registro button:hover {
+    opacity: 0.9;
+}
+
+/* Estilo para el checkbox de "Mostrar Contraseñas" */
+#registro label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#registro label input[type="checkbox"] {
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+#registro label:hover {
+    color: #333;
+}
+
+.error {
+    border: 3px solid red;
+    background: #ffecec;
+}
