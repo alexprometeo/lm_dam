@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Errores</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: #c7c7c7;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .container {
+            background: #2d2d2d;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            width: 400px;
+            border-radius: 8px;
+        }
+        input, textarea, button {
+            width: 94%;
+            margin-bottom: 10px;
+            padding: 8px;
+            background: #3a3a3a;
+            border: 1px solid #555;
+            color: white;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            background: #4caf50;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        pre {
+            background: #121212;
+            padding: 10px;
+            width: 350px;
+            border-radius: 5px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Registro de Errores</h2>
+        <form id="errorForm">
+            <label for="errorId">ID:</label>
+            <input type="text" id="errorId" required>
+
+            <label for="description">Descripción del error:</label>
+            <textarea id="description" required></textarea>
+
+            <label for="steps">Pasos para reproducirlo:</label>
+            <textarea id="steps" required></textarea>
+
+            <label for="expected">Resultado esperado:</label>
+            <textarea id="expected" required></textarea>
+
+            <label for="obtained">Resultado obtenido:</label>
+            <textarea id="obtained" required></textarea>
+
+            <label for="solution">Posible solución:</label>
+            <textarea id="solution"></textarea>
+
+            <button type="button" onclick="addError()">Añadir Error</button>
+        </form>
+    </div>
+
+    <h3>Salida en XML:</h3>
+    <pre id="xmlOutput"></pre>
+
+    <script>
+        let errors = [];
+
+        const xmlOutput = document.getElementById("xmlOutput");
+
+        function addError() {
+            let error = {
+                id: document.getElementById("errorId").value,
+                description: document.getElementById("description").value,
+                steps: document.getElementById("steps").value,
+                expected: document.getElementById("expected").value,
+                obtained: document.getElementById("obtained").value,
+                solution: document.getElementById("solution").value,
+            };
+            errors.push(error);
+            generateXML();
+        }
+
+        function generateXML() {
+            let xml = `<?xml version="1.0" encoding="UTF-8"?>\n<errors>\n`;
+            errors.forEach(err => {
+                xml += `  <error>\n`;
+                xml += `    <id>${err.id}</id>\n`;
+                xml += `    <description>${err.description}</description>\n`;
+                xml += `    <steps>${err.steps}</steps>\n`;
+                xml += `    <expected>${err.expected}</expected>\n`;
+                xml += `    <obtained>${err.obtained}</obtained>\n`;
+                xml += `    <solution>${err.solution}</solution>\n`;
+                xml += `  </error>\n`;
+            });
+            xml += `</errors>`;
+            xmlOutput.textContent = xml;
+        }
+    </script>
+</body>
+</html>

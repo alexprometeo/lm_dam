@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con Errores</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>    
+</head>
+<body>
+    <div class="container">
+        <h2>Contacto</h2>
+        <form id="contactForm">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email">
+            
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message"></textarea>
+            
+            <button type="submit" id="submitBtn">Enviar</button>
+        </form>
+        <p id="errorMessage"></p>
+    </div>   
+    
+    <div class="documentation-guide">
+        <h3>Guía para documentar incidencias</h3>
+        <p>Para cada error encontrado, responde las siguientes preguntas:</p>
+        <ul>
+            <li>¿Qué error encontraste? (Descripción clara del problema)</li>
+            <li>¿Cómo se puede reproducir? (Pasos detallados)</li>
+            <li>¿Cuál debería ser el comportamiento esperado?</li>
+            <li>¿Qué se obtiene en su lugar?</li>
+            <li>¿Alguna sugerencia de solución?</li>
+        </ul>
+        <p><strong>Ejemplo:</strong></p>
+        <p><em>"El botón 'Enviar' no valida correctamente el email. Para reproducirlo, ingresa un email sin '@' y presiona enviar. Debería mostrar un mensaje de error inmediato, pero no lo hace. Posible solución: revisar la función de validación en JavaScript."</em></p>
+    </div>
+</body>
+</html>
