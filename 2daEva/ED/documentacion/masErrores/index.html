@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://framerusercontent.com/images/ywSqKhJlBxDEBikU41Tb4rlF50.png" rel="icon">
+    <title>Registro de Usuario (Prometeo)</title>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Registro de Usuario</h2>
+        <form id="registerForm">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name">
+
+            <label for="email">Email:</label>
+            <input type="text" id="email">
+
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password">
+
+            <label for="confirmPassword">Confirmar Contraseña:</label>
+            <input type="password" id="confirmPassword">
+
+            <label for="age">Edad:</label>
+            <input type="number" id="age" min="-10" max="200">
+
+            <label for="phone">Teléfono:</label>
+            <input type="text" id="phone"> 
+
+            <div class="checkbox-container">
+                <input type="checkbox" id="terms">
+                <label for="terms">Acepto los términos y condiciones</label>
+            </div>
+
+            <button id="register" type="button">Registrarse</button>
+        </form>
+    </div>
+</body>
+</html>

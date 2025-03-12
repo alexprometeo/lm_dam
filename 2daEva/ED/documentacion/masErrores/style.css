@@ -1,0 +1,61 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1abc9c, #16a085);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 99vh;
+    margin: 0;
+    color: #fff;
+}
+.container {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 25px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    width: 475px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+}
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+input, button {
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+}
+input {
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    width: 94%;
+}
+button {
+    background: #2ecc71;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover {
+    background: #27ae60;
+}
+label {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 5px;
+}
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+input[type="checkbox"] {
+    width: auto;
+}
