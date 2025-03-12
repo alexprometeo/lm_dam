@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Depuración de Formularios</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Registro de Usuario</h2>
+        <form id="registroForm">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre">
+            
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad">
+            
+            <button type="button" onclick="validarFormulario()">Enviar</button>
+        </form>
+        <p id="mensaje" class="error"></p>
+    </div>
+</body>
+
+</html>
+<!-- 
+Ejercicio 1: Detectar errores con la consola del navegador
+    Abre el archivo index.html en el navegador.
+    Abre la consola (F12 > pestaña "Consola").
+    Intenta enviar el formulario sin llenar los campos. ¿Qué errores aparecen en la consola?
+    Encuentra los errores en el código y anótalos.
+
+Ejercicio 2: Usar console.log() para inspeccionar valores
+    Agrega console.log(nombre, edad); dentro de validarFormulario().
+    Revisa la consola y verifica qué valores está capturando el código.
+    ¿El mensaje de error aparece correctamente cuando la edad está vacía?
+
+Ejercicio 3: Colocar breakpoints en la consola del navegador
+    Abre index.html en el navegador.
+    Abre la consola con F12 y en la pestaña de "Fuentes" o "Sources", abre script.js y coloca un breakpoint en la línea donde se obtiene el valor del nombre.    
+    Inspecciona el código línea por línea.
+
+Ejercicio 4: Corregir los errores y mejorar la validación
+    Corrige el error en la obtención del nombre
+    Mejora la validación de edad para evitar que el mensaje aparezca cuando el campo está vacío.
+    Asegura que se muestre solo un mensaje de error a la vez.
+-->
