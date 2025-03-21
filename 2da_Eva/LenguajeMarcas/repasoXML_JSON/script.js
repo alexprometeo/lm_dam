@@ -18,7 +18,7 @@ cabecera.onclick = function () {
 }
 
 //Leer el archivo JSON local
-fetch('assets/cofiguracion_web.json')
+fetch('assets/configuracion_web.json')
     .then(function(response) {
         response.json()
         .then(function (data) {
