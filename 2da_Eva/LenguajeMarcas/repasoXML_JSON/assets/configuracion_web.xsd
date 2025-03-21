@@ -1,0 +1,42 @@
+<XDXD:schema xmlns:XDXD="http://www.w3.org/2001/XMLSchema">
+    <XDXD:element name="configuracion">
+        <XDXD:complexType>
+            <XDXD:sequence>
+                <XDXD:element name="sitio_web" maxOccurs="unbounded">
+                    <XDXD:complexType>
+                        <XDXD:sequence>
+                            <XDXD:element name="nombre" type="XDXD:string"></XDXD:element>
+
+                            <XDXD:element name="dominio" type="XDXD:string"></XDXD:element>
+
+                            <XDXD:element name="tecnologias">
+                                <XDXD:complexType>
+                                    <XDXD:sequence>
+                                        <XDXD:element name="tecnologia" type="XDXD:string" maxOccurs="unbounded"></XDXD:element>
+                                    </XDXD:sequence>
+                                </XDXD:complexType>
+                            </XDXD:element>
+
+                            <XDXD:element name="secciones">
+                                <XDXD:complexType>
+                                    <XDXD:sequence>
+                                        <XDXD:element name="seccion" type="XDXD:string" maxOccurs="unbounded"></XDXD:element>
+                                    </XDXD:sequence>
+                                </XDXD:complexType>
+                            </XDXD:element>
+
+                            <XDXD:element name="servidor">
+                                <XDXD:complexType>
+                                    <XDXD:sequence>
+                                        <XDXD:element name="puerto" type="XDXD:integer"></XDXD:element>
+                                        <XDXD:element name="bbdd" type="XDXD:string"></XDXD:element>
+                                    </XDXD:sequence>
+                                </XDXD:complexType>
+                            </XDXD:element>
+                        </XDXD:sequence>
+                    </XDXD:complexType>
+                </XDXD:element>
+            </XDXD:sequence>
+        </XDXD:complexType>
+    </XDXD:element>
+</XDXD:schema>

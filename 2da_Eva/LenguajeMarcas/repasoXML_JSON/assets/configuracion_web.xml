@@ -24,7 +24,15 @@
 ]> -->
 
 <!-- Enlazar a un DTD externo -->
-<!DOCTYPE configuracion SYSTEM "configuracion_web.dtd">
+<!-- <!DOCTYPE configuracion SYSTEM "configuracion_web.dtd"> -->
+
+<!-- Enlazar XSD externo de manera estándar -->
+<!-- 
+<configuracion xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="configuracion_web.xsd"> -->
+
+<!-- Enlazar XSD externo mediante xml model -->
+<?xml-model href="configuracion_web.xsd"?>
 <configuracion>
     <sitio_web>
         <nombre>CucuSoft</nombre>
