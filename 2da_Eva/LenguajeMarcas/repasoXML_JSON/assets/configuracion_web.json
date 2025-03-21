@@ -1,0 +1,15 @@
+{
+    "configuracion": [
+        {
+            "nombre": "CucuSoft",
+            "dominio": "www.cucusoft.ro",
+            "tecnologias": ["HTML", "JS", "CSS"],
+            "secciones": ["Inicio", "Blog", "Contacto"],
+            "servidor": {
+                "puerto": 3001,
+                "bbdd": "SQL Server"
+            }
+        }
+    ]
+
+}
