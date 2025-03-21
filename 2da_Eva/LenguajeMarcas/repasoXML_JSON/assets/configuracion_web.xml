@@ -7,6 +7,21 @@
      - Secciones del sitio (con subelementos seccion con valores como Inicio, Blog, Contacto)
      - Configuracion servidor (con subelementos puerto y base datos)
 -->
+
+<!DOCTYPE configuracion [
+    <!ELEMENT configuracion (sitio_web+)>
+    <!ELEMENT sitio_web (nombre, dominio, tecnologias, secciones, servidor)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT dominio (#PCDATA)>
+    <!ELEMENT tecnologias (tecnologia+)>
+    <!ELEMENT tecnologia (#PCDATA)>
+    <!ELEMENT secciones (seccion+)>
+    <!ELEMENT seccion (#PCDATA)>   
+    <!ELEMENT servidor (puerto, bbdd)> 
+    <!ELEMENT puerto (#PCDATA)>   
+    <!ELEMENT bbdd (#PCDATA)>
+]>
+
 <configuracion>
     <sitio_web>
         <nombre>CucuSoft</nombre>
