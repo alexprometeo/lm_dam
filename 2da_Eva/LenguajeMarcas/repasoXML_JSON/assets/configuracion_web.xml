@@ -7,3 +7,23 @@
      - Secciones del sitio (con subelementos seccion con valores como Inicio, Blog, Contacto)
      - Configuracion servidor (con subelementos puerto y base datos)
 -->
+<configuracion>
+    <sitio_web>
+        <nombre>CucuSoft</nombre>
+        <dominio>www.cucusoft.ro</dominio>
+        <tecnologias>
+            <tecnologia>HTML</tecnologia>
+            <tecnologia>JS</tecnologia>
+            <tecnologia>CSS</tecnologia>
+        </tecnologias>
+        <secciones>
+            <seccion>Inicio</seccion>
+            <seccion>Blog</seccion>
+            <seccion>Contacto</seccion>
+        </secciones>
+        <servidor>
+            <puerto>3001</puerto>
+            <bbdd>SQL Server</bbdd>
+        </servidor>
+    </sitio_web>
+</configuracion>
