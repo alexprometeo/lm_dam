@@ -1,9 +1,9 @@
 {
     "persona": [
         {
-            "nombre": "Cucu",
-            "genero": "O",
+            "nombre": "Cucu",            
             "apellidos": "Cucu",
+            "genero": "O",
             "edad": 29,
             "tlf": 555666789,
             "mail": "cucu@soft.com"
