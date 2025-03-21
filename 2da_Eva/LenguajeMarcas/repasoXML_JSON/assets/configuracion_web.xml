@@ -8,7 +8,8 @@
      - Configuracion servidor (con subelementos puerto y base datos)
 -->
 
-<!DOCTYPE configuracion [
+<!-- Validar mediante DTD interno -->
+<!-- <!DOCTYPE configuracion [
     <!ELEMENT configuracion (sitio_web+)>
     <!ELEMENT sitio_web (nombre, dominio, tecnologias, secciones, servidor)>
     <!ELEMENT nombre (#PCDATA)>
@@ -20,8 +21,10 @@
     <!ELEMENT servidor (puerto, bbdd)> 
     <!ELEMENT puerto (#PCDATA)>   
     <!ELEMENT bbdd (#PCDATA)>
-]>
+]> -->
 
+<!-- Enlazar a un DTD externo -->
+<!DOCTYPE configuracion SYSTEM "configuracion_web.dtd">
 <configuracion>
     <sitio_web>
         <nombre>CucuSoft</nombre>
