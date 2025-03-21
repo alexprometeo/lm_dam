@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    Crea un XML con la info de un sitio web:
+     - Nombre del sitio
+     - Dominio
+     - Tecnologias utilizadas (con subelementos tecnologia con valores como HTML, JS, CSS)
+     - Secciones del sitio (con subelementos seccion con valores como Inicio, Blog, Contacto)
+     - Configuracion servidor (con subelementos puerto y base datos)
+-->

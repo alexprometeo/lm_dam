@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://framerusercontent.com/images/ywSqKhJlBxDEBikU41Tb4rlF50.png" rel="icon">
+    <title>Manipulación de JSON en el Navegador</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header id="header">
+        <h1>Manipulación de JSON en el Navegador</h1>
+    </header>
+
+    <!-- 
+    Crea un archivo configuracion_web.xml con la información de un sitio web:
+        Nombre del sitio
+        Dominio
+        Tecnologías utilizadas (tecnologías contendra varios elementos tecnología. Por ejemplo: HTML, CSS, JavaScript, Node.js)
+        Secciones del sitio (secciones contendra varios elementos seccion. Por ejemplo: Inicio, Blog, Contacto)
+        Configuración del servidor (puerto y base de datos)
+     -->
+
+    <div class="card">
+        <div class="button-container">
+            <button type="button" onclick="mostrarContenido()">Mostrar Contenido JSON</button>
+            <!-- <button type="button" onclick="mostrarBackups()">Mostrar Configuración de Backups</button>
+            <button type="button" onclick="listarNombresBD()">Listar Nombres de Bases de Datos</button>
+            <button type="button" onclick="modificarUsuario()">Modificar Usuario de BD_Pruebas</button> -->
+        </div>
+
+        <div id="separator"></div>
+
+        <div id="showContent">
+            <h3>Resultado:</h3>
+            <pre id="result"></pre>
+        </div>
+    </div>
+
+    <footer class="footer">
+        &copy; 2025 Prometeo
+    </footer>
+</body>
+</html>
