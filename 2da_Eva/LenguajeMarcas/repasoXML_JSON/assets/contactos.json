@@ -1,0 +1,20 @@
+{
+    "persona": [
+        {
+            "nombre": "Cucu",
+            "genero": "O",
+            "apellidos": "Cucu",
+            "edad": 29,
+            "tlf": 555666789,
+            "mail": "cucu@soft.com"
+        },
+        {
+            "nombre": "Cucu2",
+            "apellidos": "Cucu2",
+            "genero": "F",
+            "edad": 92,
+            "tlf": 987654321,
+            "mail": "cucu2@soft.com"
+        }
+    ]
+}
