@@ -14,6 +14,11 @@ class Conductor extends Persona {
     constructor(nombre, pais, edad, licencia) {
         super(nombre, pais, edad);
         this.licencia = licencia;
+        this.vahiculos = [];
+    }
+
+    agregarVehiculo(vehiculo) {
+        this.vehiculos.push(vehiculo);
     }
 
     mostrarDetalles() {
