@@ -7,3 +7,8 @@ body {
     min-height: 98vh;
 }
 
+.App {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
