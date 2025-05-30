@@ -6,9 +6,9 @@ function App() {
 
   return (
     <>
-      <TwitterFollowCard name="José" userName="xX_jose_Xx" isFollowing={true}/>
+      <TwitterFollowCard name="José" userName="xX_jose_Xx" initialIsFollowing={true}/>
       <TwitterFollowCard/>
-      <TwitterFollowCard name="Diane" userName="dianeee" isFollowing={true}/>
+      <TwitterFollowCard name="Diane" userName="dianeee" initialIsFollowing={true}/>
     </>
   )
 }
