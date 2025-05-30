@@ -36,3 +36,21 @@
   cursor: pointer;
   background-color: #fff;
 }
+
+/* Añadir a TwitterFollowCard.css */
+.tw-followCard-button.is-following {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #bbb;
+  width: 140px;
+}
+
+.tw-followCard-button.is-following:hover {
+  background-color: rgba(255, 0, 0, 0.1);
+  color: red;
+  border: 1px solid red;
+}
+
+.tw-followCard-button.is-following:hover .tw-followCard-text {
+  display: none;
+}
