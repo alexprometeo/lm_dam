@@ -20,7 +20,7 @@ export function TwitterFollowCard({name = "Unknown", userName = "unknown", initi
     const isFollowingClassName = isFollowing ? 'tw-followCard-button is-following' : 'tw-followCard-button';
 
     return (
-        <article className='tw-followCard  '>
+        <article className='tw-followCard '>
             <header className='tw-followCard-header'>
                 <img className='tw-followCard-avatar' alt={avatarAlt} src={avatarSource}/>
                 <section className='tw-followCard-info'>
