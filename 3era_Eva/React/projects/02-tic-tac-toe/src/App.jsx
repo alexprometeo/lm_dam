@@ -3,6 +3,8 @@ import { useState } from 'react';
 import { Square } from './components/Square';
 import { WinnerModal } from './components/WinnerModal';
 
+import confetti from 'canvas-confetti'
+
 const TURNS = {
   X: "X",
   O: "O"
@@ -38,7 +40,13 @@ function App() {
 
     const newWinner = checkWinner(newBoard);
 
-    if (newWinner) setWinner(newWinner);
+    if (newWinner) {
+       confetti();
+       setWinner(newWinner);
+    } 
+    else if (checkEndGame(newBoard)) {
+      setWinner(false);
+    }
 
     const newTurn = turn === TURNS.X ? TURNS.O : TURNS.X;
     setTurn(newTurn);
@@ -56,6 +64,12 @@ function App() {
     }
 
     return null;
+  }
+
+  const checkEndGame = (boardToCheck) => {
+    // Comprobamos que cada una de las posiciones de nuestro
+    // array del tablero, tienen valor
+    return boardToCheck.every((square) => square !== null);
   }
 
   // Función para reiniciar el juego. Se consigue dejando con valores iniciales para el tablero y el turno

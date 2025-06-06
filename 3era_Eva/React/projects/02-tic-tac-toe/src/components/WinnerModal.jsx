@@ -3,10 +3,12 @@ import { Square } from "./Square";
 export const WinnerModal = ({winner, resetGame}) => {
     if (winner === null) return null;
 
+    const winnerText = winner ? 'Ganó' : 'Empate';
+
     return (
         <section className="winner">
             <div className="text">
-                <h2>Ganó</h2>
+                <h2>{winnerText}</h2>
                 <header className="win">
                     {winner && <Square>{winner}</Square>}
                 </header>
