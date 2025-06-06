@@ -24,13 +24,19 @@ const WINNER_COMBO = [
 // TODO: Implementar lógica de "lanzar" moneda con un random (X valores negativos y O valores positivos)
 
 function App() {
+  const random = Math.floor(Math.random() * (5 - (-5)) + (-5));
+  // console.log("random:", random);
+
+
+
   const [board, setBoard] = useState(() => {
     const boardLocalStorage = JSON.parse(window.localStorage.getItem('board'));
     return boardLocalStorage ? boardLocalStorage : Array(9).fill(null);
   });
+
   const [turn, setTurn] = useState(() => {
     const turnLocalStorage = window.localStorage.getItem('turn');
-    return turnLocalStorage ? turnLocalStorage : TURNS.X
+    return turnLocalStorage ? turnLocalStorage : random < 0 ? TURNS.X : TURNS.O;
   });
 
   const [winner, setWinner] = useState(() => {
