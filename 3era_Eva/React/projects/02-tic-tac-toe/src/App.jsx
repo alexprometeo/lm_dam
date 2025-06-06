@@ -6,8 +6,8 @@ import { WinnerModal } from './components/WinnerModal';
 import confetti from 'canvas-confetti'
 
 const TURNS = {
-  X: "X",
-  O: "O"
+  X: "✖️",
+  O: "⭕"
 }
 
 const WINNER_COMBO = [
@@ -33,7 +33,10 @@ function App() {
     return turnLocalStorage ? turnLocalStorage : TURNS.X
   });
 
-  const [winner, setWinner] = useState(null);
+  const [winner, setWinner] = useState(() => {
+    const winnerLocalStorage = window.localStorage.getItem('winner');
+    return winnerLocalStorage ? winnerLocalStorage : null;
+  });
 
   console.log("Render del componente app");
 
@@ -58,8 +61,10 @@ function App() {
     const newTurn = turn === TURNS.X ? TURNS.O : TURNS.X;
     setTurn(newTurn);
 
+    // IMPORTANTE: localStorage no funciona en un servidor, solo en el cliente local
     window.localStorage.setItem('turn', newTurn);
     window.localStorage.setItem('board', JSON.stringify(newBoard));
+    window.localStorage.setItem('winner', newWinner);
   }
 
   const checkWinner = (boardToCheck) => {
@@ -92,6 +97,7 @@ function App() {
 
     window.localStorage.removeItem('board');
     window.localStorage.removeItem('turn');
+    window.localStorage.removeItem('winner');
   }
 
   return (
