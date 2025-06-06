@@ -24,8 +24,15 @@ const WINNER_COMBO = [
 // TODO: Implementar lógica de "lanzar" moneda con un random (X valores negativos y O valores positivos)
 
 function App() {
-  const [board, setBoard] = useState(Array(9).fill(null));
-  const [turn, setTurn] = useState(TURNS.X);
+  const [board, setBoard] = useState(() => {
+    const boardLocalStorage = JSON.parse(window.localStorage.getItem('board'));
+    return boardLocalStorage ? boardLocalStorage : Array(9).fill(null);
+  });
+  const [turn, setTurn] = useState(() => {
+    const turnLocalStorage = window.localStorage.getItem('turn');
+    return turnLocalStorage ? turnLocalStorage : TURNS.X
+  });
+
   const [winner, setWinner] = useState(null);
 
   console.log("Render del componente app");
@@ -50,6 +57,9 @@ function App() {
 
     const newTurn = turn === TURNS.X ? TURNS.O : TURNS.X;
     setTurn(newTurn);
+
+    window.localStorage.setItem('turn', newTurn);
+    window.localStorage.setItem('board', JSON.stringify(newBoard));
   }
 
   const checkWinner = (boardToCheck) => {
@@ -79,6 +89,9 @@ function App() {
 
     //Si se añaden más estados hay que tenerlos en cuenta si hacemos un reinicio con sus valores por defecto
     setWinner(null);
+
+    window.localStorage.removeItem('board');
+    window.localStorage.removeItem('turn');
   }
 
   return (
