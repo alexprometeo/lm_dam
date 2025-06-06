@@ -1,32 +1,76 @@
 import { useState } from 'react';
 
 import { Square } from './components/Square';
+import { WinnerModal } from './components/WinnerModal';
 
 const TURNS = {
   X: "X",
   O: "O"
 }
 
+const WINNER_COMBO = [
+  [0, 1, 2],
+  [3, 4, 5],
+  [6, 7, 8],
+  [0, 3, 6],
+  [1, 4, 7],
+  [2, 5, 8],
+  [0, 4, 8],
+  [2, 4, 6]
+]
+
+// TODO: Implementar lógica de "lanzar" moneda con un random (X valores negativos y O valores positivos)
+
 function App() {
   const [board, setBoard] = useState(Array(9).fill(null));
   const [turn, setTurn] = useState(TURNS.X);
+  const [winner, setWinner] = useState(null);
 
   console.log("Render del componente app");
 
   const updateBoard = (index) => {
-    if (board[index] !== null) return
+    // Añadimos el winner en la condición para que no permita más movimientos
+    if (board[index] !== null || winner) return
 
     const newBoard = [...board];
-    newBoard[index] = turn
-    setBoard(newBoard)
+    newBoard[index] = turn;
+    setBoard(newBoard);
+
+    const newWinner = checkWinner(newBoard);
+
+    if (newWinner) setWinner(newWinner);
 
     const newTurn = turn === TURNS.X ? TURNS.O : TURNS.X;
-    setTurn(newTurn)
+    setTurn(newTurn);
+  }
+
+  const checkWinner = (boardToCheck) => {
+    for(const combo of WINNER_COMBO) {
+      const [a, b, c] = combo;
+      if (boardToCheck[a] &&
+          boardToCheck[a] === boardToCheck[b] &&
+          boardToCheck[a] === boardToCheck[c]
+      ) {
+        return boardToCheck[a];
+      }
+    }
+
+    return null;
+  }
+
+  // Función para reiniciar el juego. Se consigue dejando con valores iniciales para el tablero y el turno
+  const resetGame = () => {
+    setBoard(Array(9).fill(null));
+    setTurn(TURNS.X);
+
+    //Si se añaden más estados hay que tenerlos en cuenta si hacemos un reinicio con sus valores por defecto
+    setWinner(null);
   }
 
   return (
     <main className='board'>
         <h1>Tic-tac-toe</h1>
+        <button onClick={resetGame}>Reiniciar juego</button>
         <section className='game'>
           {
             board.map((square, index) => {
@@ -45,8 +89,10 @@ function App() {
 
         <section className='turn'>
           <Square isSelected={turn === TURNS.X}>{TURNS.X}</Square>
-          <Square isSelected={turn === TURNS.O}>{TURNS.O}</Square>
+          <Square isSelected={turn === TURNS.O}><span><h4>{TURNS.O}</h4></span></Square>
         </section>
+
+        <WinnerModal winner={winner} resetGame={resetGame}/>
     </main>
   )
 }
